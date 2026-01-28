@@ -1,4 +1,4 @@
-from scrapers.microsoft import scrape_microsoft_jobs
+from scraper.microsoft import scrape_microsoft_jobs
 import pandas as pd
 
 
