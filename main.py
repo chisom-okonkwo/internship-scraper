@@ -1,19 +1,19 @@
-from scraper                                .microsoft import MicrosoftScraper
-from scraper.google import GoogleScraper
+from scraper.microsoft import MicrosoftScraper
+from scraper.nvidia import NvidiaScraper
 import pandas as pd
 
 
 SCRAPER_SETTINGS = {
-    "max_pages": 5,
-    "internship_only": True,
-    "locations": ["United States", "Remote"],
+    "max_pages": 1,
+    "internship_only": False,
+    "locations": [],
 }
 
 
 def main():
     scrapers = [
         MicrosoftScraper(**SCRAPER_SETTINGS),
-        GoogleScraper(**SCRAPER_SETTINGS),
+        NvidiaScraper(**SCRAPER_SETTINGS),
     ]
 
     all_jobs = []
